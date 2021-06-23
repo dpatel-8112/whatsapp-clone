@@ -1,0 +1,55 @@
+.LSearchBarContainer {
+  box-sizing: border-box;
+  background-color: #131c21;
+  padding: 8px 0px;
+}
+.LSearchBar,
+.RChatBar {
+  width: 90%;
+  height: 40px;
+  margin: auto;
+  background-color: #323739;
+  font-size: 16px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  color: white;
+}
+.LSearchBarIcon {
+  padding: 0px 20px 0px 10px;
+}
+
+.LSearchBarInput,
+.RChatBarInput {
+  /* padding-left: 15px; */
+  color: white;
+  height: 30px;
+  width: 70%;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+.horizontalLine {
+  /* padding: 10px 0px 0px 0px; */
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.219);
+}
+.RChatBarContainer {
+  display: flex;
+  align-items: center;
+}
+.RChatBarIconContainer {
+  margin-left: 10px;
+  flex: 14%;
+  text-align: center;
+}
+.RChatBarIcon {
+  font-size: 20px;
+}
+.RChatBar {
+  margin-right: 20px;
+}
+.RChatBarInput {
+  padding-left: 15px;
+}
