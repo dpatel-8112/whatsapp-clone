@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../css/RChatArea.module.css";
 import RChats from "./RChats";
 
-function RChatArea({ users }) {
-  console.log(users);
+function RChatArea({ newChat, user }) {
   return (
     <div className={style.RChatAreaMainContainer}>
-      <div>
-        {users.map((user, index) => (
-          <RChats message={user.company.bs} />
-        ))}
+      <div
+        style={{
+          maxHeight: "73vh",
+          position: "absolute",
+          bottom: "10px",
+          right: " 0px",
+        }}
+      >
+        <RChats newChat={newChat} user={user} />
       </div>
     </div>
   );

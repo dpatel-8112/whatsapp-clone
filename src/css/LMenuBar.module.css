@@ -28,11 +28,13 @@
   border: none;
   border-radius: 50%;
   outline: none;
+  cursor: pointer;
 }
 .LMenuBarIconsContainer {
   text-align: right;
 }
 .LMenuBarIcon {
+  cursor: pointer;
   font-size: 24px;
   padding: 0px 7px;
 }

@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import hero from "../images/hero.png";
 import style from "../css/LUsersList.module.css";
 import LUser from "./LUser";
 import Users from "../json/users.json";
+import { SetActiveUserConsumer } from "../context/SetActiveUserContext";
 
 function LUsersList({ userName }) {
-  console.log(userName);
   return (
     <div className={style.LUsersListMainContainer}>
       {Users.filter((user) => {
@@ -15,7 +15,13 @@ function LUsersList({ userName }) {
           return user;
         }
       }).map((user, index) => (
-        <LUser key={index} name={user.name} message={user.message} />
+        <LUser
+          key={index}
+          Uid={user.id}
+          name={user.name}
+          message={user.message}
+          // activeUserHandler={activeUserHandler}
+        />
       ))}
     </div>
   );

@@ -46,6 +46,7 @@
 }
 .RChatBarIcon {
   font-size: 20px;
+  cursor: pointer;
 }
 .RChatBar {
   margin-right: 20px;
