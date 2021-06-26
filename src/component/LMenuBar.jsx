@@ -1,13 +1,18 @@
 import React from "react";
 import hero from "../images/hero.png";
 import style from "../css/LMenuBar.module.css";
+import { AvatarURLConsumer } from "../context/AvatarURLContext";
 
 function LMenuBar() {
   return (
     <div className={style.LMenuBarContainer}>
       {/* <h2>Left MenuBar!</h2> */}
       <div className={style.LMenuBarImageContainer}>
-        <img src={hero} alt="" className={style.Image} />
+        <AvatarURLConsumer>
+          {(avatarURL) => (
+            <img src={avatarURL} alt="" className={style.Image} />
+          )}
+        </AvatarURLConsumer>
       </div>
       <div className={style.LMenuBarIconsContainer}>
         <span className={style.LMenuBarIcon}>⭕</span>

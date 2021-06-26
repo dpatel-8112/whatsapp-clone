@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import hero from "../images/hero.png";
 import style from "../css/LUsersList.module.css";
 import { SetActiveUserConsumer } from "../context/SetActiveUserContext";
+import { AvatarURLConsumer } from "../context/AvatarURLContext";
 
 function LUser({ key, Uid, name, message, activeUserHandler }) {
   return (
@@ -15,7 +16,15 @@ function LUser({ key, Uid, name, message, activeUserHandler }) {
               id={Uid}
             >
               <div className={style.LUsersListImageContainer}>
-                <img src={hero} alt="" className={style.LUsersListImage} />
+                <AvatarURLConsumer>
+                  {(avatarURL) => (
+                    <img
+                      src={avatarURL}
+                      alt=""
+                      className={style.LUsersListImage}
+                    />
+                  )}
+                </AvatarURLConsumer>
               </div>
               <div className={style.LUsersListTextContainer}>
                 <div className={style.LUsersListTextTitle}>{name}</div>
