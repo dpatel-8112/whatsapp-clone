@@ -1,10 +1,20 @@
 import React, { useEffect, useState } from "react";
-import LMenuBar from "./LMenuBar";
-import LSearchBar from "./LSearchBar";
-import LUsersList from "./LUsersList";
+import LAddFriends from "./LAddFriends";
+import LNoProfile from "./LNoProfile";
+import LProfile from "./LProfile";
 
 function LeftPanel() {
   const [userName, setUserName] = useState("");
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isAddFriendOpen, setIsAddFriendOpen] = useState(false);
+
+  const profileOpenHandler = (newState) => {
+    setIsProfileOpen(newState);
+  };
+
+  const addFriendOpenHandler = (newState) => {
+    setIsAddFriendOpen(newState);
+  };
 
   const userNameHandler = (newUserName) => {
     setUserName(newUserName);
@@ -13,10 +23,18 @@ function LeftPanel() {
 
   return (
     <div>
-      {/* <h1>Left Panel</h1> */}
-      <LMenuBar />
-      <LSearchBar userNameHandler={userNameHandler} />
-      <LUsersList userName={userName} />
+      {isProfileOpen ? (
+        <LProfile profileOpenHandler={profileOpenHandler} />
+      ) : isAddFriendOpen ? (
+        <LAddFriends addFriendOpenHandler={addFriendOpenHandler} />
+      ) : (
+        <LNoProfile
+          addFriendOpenHandler={addFriendOpenHandler}
+          profileOpenHandler={profileOpenHandler}
+          userNameHandler={userNameHandler}
+          userName={userName}
+        />
+      )}
     </div>
   );
 }

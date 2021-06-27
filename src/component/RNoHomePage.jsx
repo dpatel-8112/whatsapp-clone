@@ -13,9 +13,9 @@ function RNoHomePage({ activeUser }) {
   };
 
   const activeUserFullBody = Users.filter((user) => {
-    if (activeUser == user.id) {
-      return user;
-    }
+    // if (activeUser == user.id) {
+    return user;
+    // }
   });
 
   return (

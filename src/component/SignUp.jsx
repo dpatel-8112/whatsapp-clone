@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import firebase from "firebase";
 import "../database/firebase";
 
-function SignUp({ isSignedInHandler, avatarHandler }) {
+function SignUp({ setSignedInUserHandler, isSignedInHandler }) {
   const [isSignedIn, setIsSignedIn] = useState(false);
 
   const signUpHandler = () => {
@@ -13,11 +13,22 @@ function SignUp({ isSignedInHandler, avatarHandler }) {
       .then((result) => {
         setIsSignedIn(true);
         isSignedInHandler(true);
-        avatarHandler(result.user.photoURL);
-        console.log(result);
-        console.log(result.user.displayName);
-        console.log(result.user.email);
-        console.log(result.user.photoURL);
+        setSignedInUserHandler(result.user);
+
+        firebase
+          .database()
+          .ref("users/" + result.user.uid)
+          .set({
+            name: result.user.displayName,
+            email: result.user.email,
+            profile_picture: result.user.photoURL,
+            about: "I am not using Whatsapp",
+          });
+
+        // console.log(result.user);
+        // console.log(result.user.displayName);
+        // console.log(result.user.email);
+        // console.log(result.user.photoURL);
       })
       .catch((error) => {
         console.log(error);

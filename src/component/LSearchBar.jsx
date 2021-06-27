@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import style from "../css/LSearchBar.module.css";
+import { BiSearchAlt2 } from "react-icons/bi";
 
 function LSearchBar({ userNameHandler }) {
   const [name, setName] = useState("");
@@ -19,7 +20,9 @@ function LSearchBar({ userNameHandler }) {
     <>
       <div className={style.LSearchBarContainer}>
         <div className={style.LSearchBar}>
-          <span className={style.LSearchBarIcon}>🔍</span>
+          <span className={style.LSearchBarIcon}>
+            <BiSearchAlt2 />
+          </span>
           <input
             onChange={nameSearchHandler}
             value={name}

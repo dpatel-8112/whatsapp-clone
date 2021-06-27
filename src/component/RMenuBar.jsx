@@ -1,6 +1,8 @@
 import React from "react";
 import hero from "../images/hero.png";
 import style from "../css/LMenuBar.module.css";
+import { BiSearchAlt2 } from "react-icons/bi";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 function RMenuBar({ userName }) {
   return (
@@ -15,9 +17,14 @@ function RMenuBar({ userName }) {
       </div>
 
       <div className={style.LMenuBarIconsContainer}>
-        <span className={style.LMenuBarIcon}>🔍</span>
+        <span className={style.LMenuBarIcon}>
+          <BiSearchAlt2 />
+        </span>
 
-        <span className={style.LMenuBarIcon}>🎚</span>
+        <span className={style.LMenuBarIcon}>
+          {" "}
+          <BsThreeDotsVertical />
+        </span>
       </div>
     </div>
   );

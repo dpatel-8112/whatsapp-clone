@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import hero from "../images/hero.png";
 import style from "../css/LUsersList.module.css";
 import { SetActiveUserConsumer } from "../context/SetActiveUserContext";
-import { AvatarURLConsumer } from "../context/AvatarURLContext";
+import { SignedInUserAvatarURLConsumer } from "../context/SignedInUserAvatarURLContext";
 
-function LUser({ key, Uid, name, message, activeUserHandler }) {
+function LUser({ users }) {
+  console.log(users);
+
   return (
     <>
-      <SetActiveUserConsumer>
+      {/* <SetActiveUserConsumer>
         {(setActiveUserHandler) => {
           return (
             <div
@@ -16,28 +18,18 @@ function LUser({ key, Uid, name, message, activeUserHandler }) {
               id={Uid}
             >
               <div className={style.LUsersListImageContainer}>
-                <AvatarURLConsumer>
-                  {(avatarURL) => (
-                    <img
-                      src={avatarURL}
-                      alt=""
-                      className={style.LUsersListImage}
-                    />
-                  )}
-                </AvatarURLConsumer>
+                <img src={avatar} alt="" className={style.LUsersListImage} />
               </div>
               <div className={style.LUsersListTextContainer}>
                 <div className={style.LUsersListTextTitle}>{name}</div>
                 <span className={style.LUsersListTextDate}>12/06/2021</span>
-                <div className={style.LUsersListTextMessage}>
-                  {message.slice(0, 25)} ...
-                </div>
+                <div className={style.LUsersListTextMessage}>{email}</div>
                 <span className={style.LUsersListTextBadge}>255</span>
               </div>
             </div>
           );
         }}
-      </SetActiveUserConsumer>
+      </SetActiveUserConsumer> */}
 
       <div className={style.horizontalLine}></div>
     </>

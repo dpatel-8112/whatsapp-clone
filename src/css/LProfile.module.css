@@ -1,0 +1,103 @@
+.LProfileMainContainer {
+  margin: 0;
+  padding: 0;
+  background-color: #131c21;
+  height: 90vh;
+  width: 100%;
+}
+.LProfileContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 0px 0px 20px;
+}
+.LProfileBackButtonContainer {
+  height: 80px;
+  /* border: 1px solid red; */
+  width: 100%;
+  position: relative;
+  /* text-align: left; */
+}
+.LProfileBackButton {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0px 0px 10px 10px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  /* align-items: baseline; */
+}
+.LProfileBackButton span:last-child {
+  cursor: auto;
+  padding-left: 15px;
+}
+.LProfileImageContainer {
+  margin-top: 20px;
+  width: 100%;
+}
+.LProfileImage {
+  width: 40%;
+  border-radius: 50%;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.5);
+}
+.LProfileUserInfo {
+  text-align: left;
+  padding: 10px 0px 0px 15px;
+}
+.LProfileUserInfoNameContainer {
+  margin: 10px 0px;
+}
+.LProfileUserInfoName {
+  font-size: 14px;
+  color: teal;
+  padding: 0px 0px 10px 0px;
+}
+.LProfileUserInfoNameContainer input {
+  outline: none;
+  border: none;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0);
+  color: aliceblue;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.horizontalLine {
+  height: 0;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 0px 0px 10px 0px;
+}
+.LProfileUserInfoNote {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  font-family: sans-serif;
+}
+.LProfileUserInfoAboutContainer {
+  margin-top: 20px;
+}
+.LProfileUserInfoAboutHeading {
+  color: teal;
+}
+.LProfileUserInfoAbout {
+  padding: 15px 0px 0px 0px;
+  color: aliceblue;
+}
+.LAddFriendList {
+  margin: 20px 0px;
+  width: 90%;
+}
+.LAddFriendListItem {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.123);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.LAddFriendListItem span {
+  display: block;
+}

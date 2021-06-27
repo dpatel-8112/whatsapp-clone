@@ -31,12 +31,38 @@
   cursor: pointer;
 }
 .LMenuBarIconsContainer {
-  text-align: right;
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
 }
 .LMenuBarIcon {
   cursor: pointer;
   font-size: 24px;
   padding: 0px 7px;
+}
+.LMenuBarThreeDotsIcon {
+  position: relative;
+}
+.LMenuBarThreeDotsIconContainer {
+  display: none;
+  position: absolute;
+  min-width: 200px;
+  top: 40px;
+  left: -170px;
+  z-index: 1;
+  font-size: 16px;
+  background-color: #323739;
+  box-shadow: 2px 2px 10px 0px #595b5c;
+  border-radius: 10px;
+}
+.LMenuBarThreeDotsIconItem {
+  padding: 15px 15px 15px 25px;
+}
+.LMenuBarThreeDotsIconItem:hover {
+  background-color: #1a1b1b80;
+}
+.dropDownOpen {
+  display: block;
 }
 .RMenuBarTextTitle {
   font-size: 20px;
