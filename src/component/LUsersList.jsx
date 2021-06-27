@@ -45,11 +45,16 @@ function LUsersList({ userName }) {
       });
   };
 
+  useEffect(() => {
+    usersRenderingHandler();
+    return () => {};
+  }, []);
+
   return (
     <div className={style.LUsersListMainContainer}>
-      {users ? <LUser users={users} /> : ""}
+      {/* {users ? <LUser users={users} /> : ""} */}
 
-      {/* <SignedInUserUidConsumer>
+      <SignedInUserUidConsumer>
         {(uid) => setMyUid(uid)}
       </SignedInUserUidConsumer>
       {users != null
@@ -74,7 +79,7 @@ function LUsersList({ userName }) {
                 // activeUserHandler={activeUserHandler}
               />
             ))
-        : ""} */}
+        : ""}
     </div>
   );
 }

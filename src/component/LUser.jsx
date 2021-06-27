@@ -4,18 +4,18 @@ import style from "../css/LUsersList.module.css";
 import { SetActiveUserConsumer } from "../context/SetActiveUserContext";
 import { SignedInUserAvatarURLConsumer } from "../context/SignedInUserAvatarURLContext";
 
-function LUser({ users }) {
-  console.log(users);
+function LUser({ name, email, message, avatar }) {
+  // console.log(users);
 
   return (
     <>
-      {/* <SetActiveUserConsumer>
+      <SetActiveUserConsumer>
         {(setActiveUserHandler) => {
           return (
             <div
               onClick={(e) => setActiveUserHandler(e.currentTarget.id)}
               className={style.LUsersListContainer}
-              id={Uid}
+              // id={Uid}
             >
               <div className={style.LUsersListImageContainer}>
                 <img src={avatar} alt="" className={style.LUsersListImage} />
@@ -29,7 +29,7 @@ function LUser({ users }) {
             </div>
           );
         }}
-      </SetActiveUserConsumer> */}
+      </SetActiveUserConsumer>
 
       <div className={style.horizontalLine}></div>
     </>
