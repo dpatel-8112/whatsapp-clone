@@ -1,4 +1,4 @@
-# whatsapp-clone
+# whatsapp-clone (React)
 http://dpatel-8112.github.io/whatsapp-clone
 
 ![image](https://user-images.githubusercontent.com/66103186/123662325-fb4d5800-d852-11eb-878c-c3a554729610.png)
